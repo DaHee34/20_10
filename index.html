@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi 4 Chị Em Quán Cà Phê - 20/10 Special</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#FAF6F0',
+                            100: '#F3E8DB',
+                            200: '#E4CFBA',
+                            300: '#D2B396',
+                            400: '#BD9472',
+                            500: '#A47653',
+                            600: '#865A3B',
+                            700: '#6A4329',
+                            800: '#4F2F19',
+                            900: '#331B0B',
+                        },
+                        zalo: {
+                            blue: '#0068FF',
+                            light: '#E5EFFE',
+                            chatBg: '#E2E9F0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF6F0;
+            color: #331B0B;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#D2B396 0.7px, transparent 0.7px);
+            background-size: 20px 20px;
+        }
+
+        /* Custom scrollbar for Zalo chat */
+        .chat-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .chat-scroll::-webkit-scrollbar-track {
+            background: #E2E9F0;
+        }
+        .chat-scroll::-webkit-scrollbar-thumb {
+            background: #BD9472;
+            border-radius: 4px;
+        }
+
+        /* Smooth pulse for SOS badge */
+        @keyframes sosPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.85; }
+        }
+        .animate-sos {
+            animation: sosPulse 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-coffee-50 bg-pattern min-h-screen flex flex-col justify-between antialiased selection:bg-coffee-200 selection:text-coffee-900">
+
+    <!-- HEADER / NAVIGATION & LOFI TOGGLE -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-coffee-50/90 border-b border-coffee-200/80 transition-all">
+        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-coffee-800 text-amber-100 flex items-center justify-center text-lg font-bold shadow-sm">
+                    ☕
+                </div>
+                <div>
+                    <span class="text-sm sm:text-base font-bold text-coffee-900 block leading-tight">Góc Nhỏ Quán Mình</span>
+                    <span class="text-[11px] text-coffee-600 font-medium">Gửi 4 chị em • 20/10 Warm Tribute</span>
+                </div>
+            </div>
+
+            <!-- Lofi Music Controller -->
+            <button id="musicBtn" onclick="toggleLofi()" class="flex items-center gap-2 bg-coffee-100 hover:bg-coffee-200 border border-coffee-300 px-3.5 py-1.5 rounded-full text-xs font-semibold text-coffee-800 transition shadow-sm active:scale-95">
+                <i id="musicIcon" class="fa-solid fa-music text-coffee-600"></i>
+                <span id="musicLabel">Bật Nhạc Chill</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full space-y-12">
+
+        <!-- HERO SECTION -->
+        <section class="text-center space-y-4 max-w-2xl mx-auto pt-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coffee-100 border border-coffee-300 text-coffee-800 text-xs font-semibold shadow-sm">
+                <i class="fa-solid fa-heart text-rose-500"></i> 20/10 Special • Vài lời em Hee gửi đến các bông hồng của quán
+            </div>
+
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-coffee-900 leading-snug">
+                Gửi 4 Mảnh Ghép Dễ Thương Nhất Quán Cà Phê Mình! ✨
+            </h1>
+
+            <p class="text-xs sm:text-sm text-coffee-700 leading-relaxed font-normal">
+                Một trang web nhỏ xíu, giản dị từ <strong class="text-coffee-900">DaHee</strong> gửi tới <strong class="text-coffee-900">chị Yến, chị Trang, chị Châu và em Thư</strong>. Cảm ơn các chị em vì đã luôn đồng hành, sẻ chia và mang đến thật nhiều niềm vui cho góc quán nhỏ của chúng ta!
+            </p>
+        </section>
+
+        <!-- GÓC CHỊ EM (4 CARDS THÂN THIẾT) -->
+        <section class="space-y-6">
+            <div class="text-center space-y-1">
+                <h2 class="text-xl sm:text-2xl font-bold text-coffee-900">
+                    Vài Dòng Thương Gửi Chị Em Quán Mình 💛
+                </h2>
+                <p class="text-xs text-coffee-600">Lời chúc từ tâm của DaHee (Click vào từng người để đọc lá thư riêng nhé)</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+
+                <!-- 1. CHỊ YẾN (CHỦ QUÁN) -->
+                <div class="bg-white border border-coffee-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4 relative group">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start border-b border-coffee-100 pb-2.5">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Chủ Quán Tâm Lý</span>
+                                <h3 class="text-lg font-bold text-coffee-900 mt-1">Chị Yến</h3>
+                            </div>
+                            <span class="text-2xl">👑</span>
+                        </div>
+                        <p class="text-xs text-coffee-700 leading-relaxed">
+                            Luôn bao bọc, lo lắng và làm chỗ dựa tinh thần cho cả team. Cảm ơn chị Yến luôn kiên nhẫn, thấu hiểu và gánh vác mọi việc để quán lúc nào cũng ấm áp như một gia đình nhỏ.
+                        </p>
+                    </div>
+                    <button onclick="openCardModal('yen')" class="w-full py-2 bg-coffee-800 hover:bg-coffee-900 text-coffee-50 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-envelope-open-text text-amber-300"></i> Đọc Lời Chúc Riêng Từ DaHee
+                    </button>
+                </div>
+
+                <!-- 2. CHỊ TRANG -->
+                <div class="bg-white border border-coffee-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4 relative group">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start border-b border-coffee-100 pb-2.5">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Chu Đáo & Tỉ Mỉ</span>
+                                <h3 class="text-lg font-bold text-coffee-900 mt-1">Chị Trang</h3>
+                            </div>
+                            <span class="text-2xl">🌱</span>
+                        </div>
+                        <p class="text-xs text-coffee-700 leading-relaxed">
+                            Chỉn chu và tỉ mỉ trong ca, gần gũi với mọi người.
+                        </p>
+                    </div>
+                    <button onclick="openCardModal('trang')" class="w-full py-2 bg-coffee-800 hover:bg-coffee-900 text-coffee-50 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-envelope-open-text text-amber-300"></i> Đọc Lời Chúc Riêng Từ DaHee
+                    </button>
+                </div>
+
+                <!-- 3. EM THƯ -->
+                <div class="bg-white border border-coffee-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4 relative group">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start border-b border-coffee-100 pb-2.5">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-rose-800 bg-rose-100 px-2 py-0.5 rounded">Em Út Năng Lượng</span>
+                                <h3 class="text-lg font-bold text-coffee-900 mt-1">Em Thư</h3>
+                            </div>
+                            <span class="text-2xl">☀️</span>
+                        </div>
+                        <p class="text-xs text-coffee-700 leading-relaxed">
+                            Năng nổ, đáng yêu, luôn mang nụ cười tươi đến quán.
+                        </p>
+                    </div>
+                    <button onclick="openCardModal('thu')" class="w-full py-2 bg-coffee-800 hover:bg-coffee-900 text-coffee-50 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-envelope-open-text text-amber-300"></i> Đọc Lời Chúc Riêng Từ DaHee
+                    </button>
+                </div>
+
+                <!-- 4. CHỊ CHÂU (SOÁI CA) -->
+                <div class="bg-white border border-coffee-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4 relative group">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start border-b border-coffee-100 pb-2.5">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-800 bg-slate-200 px-2 py-0.5 rounded">Soái Ca Ngầu Đét</span>
+                                <h3 class="text-lg font-bold text-coffee-900 mt-1">Chị Châu</h3>
+                            </div>
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                        <p class="text-xs text-coffee-700 leading-relaxed">
+                            Ân cần, tỉ mỉ, quan tâm đến quán và mọi người trong quán.
+                        </p>
+                    </div>
+                    <button onclick="openCardModal('chau')" class="w-full py-2 bg-coffee-800 hover:bg-coffee-900 text-coffee-50 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-envelope-open-text text-amber-300"></i> Đọc Lời Chúc Riêng Từ DaHee
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BẢNG LỜI CHÚC NOTE NHỎ GÓC QUÁN -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between border-b border-coffee-200 pb-3">
+                <div>
+                    <h2 class="text-lg font-bold text-coffee-900">Bảng Dán Note Góc Quán 📌</h2>
+                </div>
+            </div>
+
+            <div id="noteContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-amber-100/90 border border-amber-300 p-3.5 rounded-xl text-xs space-y-1.5 shadow-sm rotate-1 hover:rotate-0 transition">
+                    <div class="flex justify-between font-bold text-amber-900 text-[11px]">
+                        <span>📌 Lời Nhắn Từ DaHee</span>
+                        <span>Ca Trực</span>
+                    </div>
+                    <p class="text-amber-950 italic">"Cảm ơn chị em ca trước lúc nào cũng dọn dẹp quầy sạch sẽ và chuẩn bị cà hê, kem múi sẵn sàng cho ca sau nhen!"</p>
+                </div>
+            </div>
+
+            <div id="noteContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="bg-amber-100/90 border border-amber-300 p-3.5 rounded-xl text-xs space-y-1.5 shadow-sm rotate-1 hover:rotate-0 transition">
+                    <div class="flex justify-between font-bold text-amber-900 text-[11px]">
+                        <span>📌 Lời Nhắn Từ DaHee</span>
+                        <span>Ca Trực</span>
+                    </div>
+                    <p class="text-amber-950 italic">"Em hy zọng mấy cái ghễ sẽ hong bị gãy nữa"</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-coffee-200 bg-coffee-100/60 py-6 text-center text-xs text-coffee-700 space-y-1">
+        <p class="font-bold text-coffee-900">Chúc Chị Yến, Chị Trang, Em Thư & Chị Châu Ngày 20/10 Thật Vui Vẻ & Rạng Rỡ! 🎉</p>
+        <p class="text-coffee-600 text-[11px]">Trang web nhỏ thương gửi từ DaHee • Quán Cà Phê Chúng Ta</p>
+    </footer>
+
+    <!-- MODAL: LÁ THƯ LỜI CHÚC CÁ NHÂN -->
+    <div id="cardModal" class="fixed inset-0 bg-coffee-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coffee-50 border border-coffee-300 rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
+            <button onclick="closeCardModal()" class="absolute top-3.5 right-3.5 text-coffee-400 hover:text-coffee-800 text-lg transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center space-y-1 pt-1 border-b border-coffee-200 pb-3">
+                <span id="modalRoleBadge" class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded">Role</span>
+                <h3 id="modalName" class="text-xl font-bold text-coffee-900">Name</h3>
+            </div>
+
+            <!-- Envelope / Personal Letter Content -->
+            <div class="bg-white border border-coffee-200 rounded-xl p-4.5 text-xs space-y-3 shadow-inner relative overflow-hidden">
+                <div class="flex justify-between items-center text-coffee-500 font-medium text-[11px]">
+                    <span>💌 Lá thư từ DaHee</span>
+                    <span>20/10 Special</span>
+                </div>
+                <p id="modalPromise" class="text-coffee-800 leading-relaxed font-normal whitespace-pre-line text-xs sm:text-sm italic bg-coffee-50/60 p-3 rounded-lg border border-coffee-100">
+                    Nội dung thư ở đây...
+                </p>
+            </div>
+
+            <button onclick="closeCardModal()" class="w-full py-2.5 bg-coffee-800 hover:bg-coffee-900 text-coffee-50 text-xs font-bold rounded-xl transition shadow-sm">
+                Đóng Lá Thư ✨
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & AUDIO -->
+    <script>
+        // PERSONAL LETTERS DATA FROM DAHEE
+        const cardData = {
+            yen: {
+                role: 'Chủ Quán Tâm Lý & Ấm Áp',
+                name: 'Chị Yến (Chủ Quán)',
+                promise: 'Thương gửi chị Yến,\n\nNhân ngày 20/10, em Hee chúc chị luôn tràn đầy sức khỏe, bình an và lúc nào cũng giữ vững nụ cười rạng rỡ. Cảm ơn chị Yến đã luôn gánh vác, bao bọc và tạo ra một không gian ấm cúng để chị em mình có cơ hội làm việc và gắn bó bên nhau. Chúc chị quán mình lúc nào cũng đông khách, công việc thuận lợi và luôn gặp thật nhiều niềm vui trong cuộc sống nhé!'
+            },
+            trang: {
+                role: 'Dịu Dàng & Chỉn Chu',
+                name: 'Chị Trang',
+                promise: 'Thương gửi chị Trang,\n\nChúc chị Trang 20/10 thật nhiều niềm vui, luôn xinh đẹp và rạng rỡ! Em rất trân trọng sự tỉ mỉ, cẩn thận và dịu dàng của chị trong mỗi ca làm. Cảm ơn chị đã luôn chỉn chu, hỗ trợ em và mọi người rất nhiều. Chúc chị luôn bình an, công việc trôi chảy và luôn có những ngày thật êm đềm nhé!'
+            },
+            thu: {
+                role: 'Em Út Năng Lượng & Rạng Rỡ',
+                name: 'Em Thư',
+                promise: 'Gửi em Thư,\n\nChúc em Thư 20/10 thật vui vẻ, luôn giữ được sự hồn nhiên, năng nổ và nụ cười rực rỡ như thế này nhé! Cảm ơn em vì luôn mang đến nguồn năng lượng tích cực cho cả quán. Chúc em học tập và làm việc thật tốt, luôn xinh xắn và gặp thật nhiều may mắn trên chặng đường sắp tới!'
+            },
+            chau: {
+                role: 'Mạnh mẽ, Cá tính',
+                name: 'Chị Châu',
+                promise: 'Gửi chị Châu,\n\nNhân ngày 20/10, em chúc chị luôn vui vẻ, cống hiến hết mình với công việc và mỗi ngày đều vui vẻ với mọi người và chính mình nhé! Cảm ơn chị Châu vì đã chỉ ra những lỗi sai của em để khắc phục giúp quán mình vận hành trơn tru hơn!'
+            }
+        };
+
+        function openCardModal(key) {
+            const data = cardData[key];
+            if (!data) return;
+
+            document.getElementById('modalRoleBadge').innerText = data.role;
+            document.getElementById('modalName').innerText = data.name;
+            document.getElementById('modalPromise').innerText = data.promise;
+
+            document.getElementById('cardModal').classList.remove('hidden');
+        }
+
+        function closeCardModal() {
+            document.getElementById('cardModal').classList.add('hidden');
+        }
+
+        // NOTE ADDING
+        function openAddNoteModal() {
+            document.getElementById('addNoteModal').classList.remove('hidden');
+        }
+
+        function closeAddNoteModal() {
+            document.getElementById('addNoteModal').classList.add('hidden');
+        }
+
+        function saveNote() {
+            const author = document.getElementById('noteAuthor').value.trim() || 'DaHee';
+            const text = document.getElementById('noteText').value.trim();
+
+            if (!text) {
+                alert('Vui lòng nhập nội dung nhắn!');
+                return;
+            }
+
+            const container = document.getElementById('noteContainer');
+            const newDiv = document.createElement('div');
+            newDiv.className = "bg-amber-100/90 border border-amber-300 p-3.5 rounded-xl text-xs space-y-1.5 shadow-sm rotate-1 hover:rotate-0 transition";
+            newDiv.innerHTML = `
+                <div class="flex justify-between font-bold text-amber-900 text-[11px]">
+                    <span>📌 ${author}</span>
+                    <span>Mới Dán</span>
+                </div>
+                <p class="text-amber-950 italic">"${text}"</p>
+            `;
+
+            container.prepend(newDiv);
+            document.getElementById('noteAuthor').value = '';
+            document.getElementById('noteText').value = '';
+            closeAddNoteModal();
+        }
+
+        // WEB AUDIO LOFI GENERATOR (SOFT ACOUSTIC CHORDS)
+        let audioCtx = null;
+        let isPlaying = false;
+        let lofiInterval = null;
+
+        function toggleLofi() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            const label = document.getElementById('musicLabel');
+            const icon = document.getElementById('musicIcon');
+
+            if (isPlaying) {
+                isPlaying = false;
+                clearInterval(lofiInterval);
+                label.innerText = 'Bật Nhạc Chill';
+                icon.className = 'fa-solid fa-music text-coffee-600';
+            } else {
+                isPlaying = true;
+                label.innerText = 'Đang Phát Lofi';
+                icon.className = 'fa-solid fa-pause text-amber-700 animate-pulse';
+                playLofiLoop();
+            }
+        }
+
+        function playLofiLoop() {
+            const chords = [
+                [261.63, 329.63, 392.00, 493.88], // Cmaj7
+                [220.00, 261.63, 329.63, 392.00], // Am7
+                [174.61, 220.00, 261.63, 329.63], // Fmaj7
+                [196.00, 246.94, 293.66, 349.23]  // G7
+            ];
+            let chordIdx = 0;
+
+            function triggerChord() {
+                if (!isPlaying) return;
+                const currentChord = chords[chordIdx % chords.length];
+                currentChord.forEach((freq, idx) => {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                    gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                    gain.gain.linearRampToValueAtTime(0.018, audioCtx.currentTime + 0.15);
+                    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 2.8);
+
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+
+                    osc.start(audioCtx.currentTime + idx * 0.04);
+                    osc.stop(audioCtx.currentTime + 2.9);
+                });
+                chordIdx++;
+            }
+
+            triggerChord();
+            lofiInterval = setInterval(triggerChord, 3200);
+        }
+    </script>
+</body>
+</html>
